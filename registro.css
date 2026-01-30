@@ -1,0 +1,149 @@
+
+body, input, select, textarea, button, label {
+  font-family: "Segoe UI", sans-serif;   /* Tipografía principal */
+  font-size: 1rem;                       /* Tamaño de fuente estándar */
+}
+
+/* Estilo para el formulario de registro */
+.form-registro {
+  max-width: 600px;                      
+  margin: auto;                          
+}
+
+/* Estilo para las etiquetas dentro del formulario */
+.form-registro label {
+  margin-top: 1rem;                      
+  display: block;                        
+  font-weight: 500;                     
+}
+
+/* Estilo para los campos de entrada, select y textarea */
+.form-registro input,
+.form-registro select,
+.form-registro textarea {
+  width: 100%;                           
+  padding: .5rem;                        
+  margin-top: .3rem;                     
+  border-radius: 6px;                    
+  border: 1px solid var(--border);      
+}
+
+/* VALIDACIÓN VISUAL  */
+
+/* Estilo para los campos con estado 'invalid' */
+input.invalid,
+select.invalid,
+textarea.invalid {
+  border-color: red !important;          
+}
+
+/* Estilo para los campos con estado 'valid' */
+input.valid,
+select.valid,
+textarea.valid {
+  border-color: green !important;        
+}
+
+/* Estilo para los campos requeridos que no son válidos */
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+  border-color: var(--border);           
+}
+
+/* RADIO BUTTONS */
+
+/* Estilo para los labels dentro del grupo de radio */
+.radio-group label {
+  display: block;                        
+  position: relative;                    
+  padding-left: 25px;                    
+  margin-bottom: 0.8rem;                 
+  cursor: pointer;                      
+  font-weight: 500;                     
+  user-select: none;                     
+}
+
+/* Estilo para el radio button */
+.radio-group input[type="radio"] {
+  position: absolute;                   
+  top: 0;                                
+  left: 0;                              
+  margin: 0;                             
+  cursor: pointer;                      
+}
+
+/* Se oculta un elemento con la clase .hidden */
+.hidden {
+  display: none !important;              
+}
+
+/* Feedback de registro correcto */
+.form-feedback {
+  display: none;                        
+  margin-top: 1rem;                      
+  background: #ecfdf5;                   
+  border: 1px solid var(--asistente);    
+  padding: .75rem;                      
+  border-radius: 6px;                    
+  color: var(--asistente);             
+  font-weight: 500;                      
+}
+
+/* Estilo para los fieldsets dentro del formulario */
+fieldset {
+  margin-top: 1.5rem;                   
+  padding: 1rem;                        
+  border-radius: 6px;                   
+  border: 1px solid var(--border);       
+}
+
+/* ACCIONES Y BOTONES  */
+
+/* Estilo para el contenedor de los botones de acción */
+.acciones {
+  margin-top: 1.5rem;                    
+  display: flex;                          
+  gap: 1rem;                            
+}
+
+/* Estilo general para los botones */
+.btn {
+  padding: .5rem 1rem;                  
+  border-radius: 6px;                    
+  font-size: .9rem;                       
+  text-decoration: none;                  
+  cursor: pointer;                       
+}
+
+/* Estilo para el botón primario */
+.btn-primary {
+  background: var(--primary);             
+  color: #fff;                           
+}
+
+/* Estilo para el botón de tipo 'outline' */
+.btn-outline {
+  border: 1px solid var(--primary);      
+  color: var(--primary);                 
+}
+
+/* Estilo para el botón primario en hover */
+.btn-primary:hover {
+  background: #172554;                   
+}
+
+/* Estilo específico para el botón Reiniciar */
+#btnReset {
+  background: #f3f4f6;                  
+  color: #111;                            
+  border: 1px solid var(--border);        
+}
+
+/* Estilo para el botón Reiniciar en hover */
+#btnReset:hover {
+  background: #e5e7eb;                  
+}
+
+
+

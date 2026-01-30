@@ -1,0 +1,140 @@
+/* Estilo para el contenedor de pestañas */
+.tabs {
+  margin: 1rem 0;                
+}
+
+/* Estilo para los enlaces de las pestañas */
+.tab-link {
+  padding: 0.5rem 1rem;           
+  margin-right: 0.5rem;           
+  cursor: pointer;              
+  border-radius: 6px;             
+  border: 1px solid var(--border);
+  background: var(--bg);          
+  font-weight: 500;               
+}
+
+/* Estilo para las pestañas activas */
+.tab-link.active {
+  background: var(--primary);    
+  color: #fff;                   
+  border-color: var(--primary);  
+}
+
+/* Estilo para el contenido de las pestañas */
+.tab-content {
+  display: none;                  
+}
+
+/* Estilo para las celdas de las tablas dentro de las pestañas */
+.tab-content table th, .tab-content table td {
+  border-bottom: 1px solid var(--border); 
+  padding: 0.75rem;               
+}
+
+/* Estilo para las filas de las tablas al pasar el cursor */
+.tab-content table tr:hover {
+  background: #f3f4f6;          
+}
+
+/* Estilo para la barra de búsqueda */
+.search-bar input {
+  width: 100%;                    
+  padding: 0.5rem;                
+  border-radius: 6px;             
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;            
+}
+
+/* Estilo para el botón de detalles */
+.btn-detalles {
+  background: var(--secondary);  
+  color: #fff;                  
+  border: none;                  
+  padding: 0.4rem 0.7rem;         
+  border-radius: 6px;             
+  cursor: pointer;              
+  font-size: 0.85rem;             
+}
+
+/* Estilo para los gráficos de estadísticas */
+.estadisticas-graficos canvas {
+  background: var(--card);        
+  border-radius: 8px;            
+  padding: 1rem;                  
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08); 
+  width: 100%;                    
+  height: 300px;                  
+  margin-bottom: 1.5rem;         
+}
+
+/* Contenedor principal para las tarjetas de eventos */
+.container-eventos {
+  display: grid;                          
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 1.5rem;                            
+  padding: 1rem 0;                      
+}
+
+/* Estilo para cada tarjeta de evento */
+.card.evento {
+  display: flex;                          
+  flex-direction: column;                 
+  background: var(--card);                
+  border: 1px solid var(--border);        
+  border-radius: 8px;                     
+  padding: 1rem;                         
+  height: 100%;                           
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); 
+}
+
+/* Estilo para el contenedor de pestañas y barra de búsqueda */
+.tabs, .search-bar {
+  width: 100%;                            
+  margin-bottom: 1rem;                   
+}
+
+/* Estilo para los botones dentro de las pestañas */
+.tabs button {
+  min-width: 90px;                     
+  padding: 0.4rem 0.8rem;                
+  margin-right: 0.5rem;                  
+  font-size: 0.9rem;                     
+}
+
+/* Estilo para las tablas dentro de las tarjetas de evento */
+.card table {
+  width: 100%;                           
+  table-layout: auto;                     
+  border-collapse: collapse;             
+  overflow-x: auto;                      
+}
+
+/* Estilo para las celdas de las tablas dentro de las tarjetas */
+.card th, .card td {
+  padding: 0.5rem 0.75rem;                
+  text-align: left;                      
+  vertical-align: middle;                
+  white-space: nowrap;                  
+}
+
+/* Estilo para las tablas con scroll horizontal en pantallas pequeñas */
+.card table {
+  display: block;                        
+  overflow-x: auto;                       
+}
+
+/* Ajustes responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+  /* Contenedor de eventos con una sola columna en pantallas pequeñas */
+  .container-eventos {
+    grid-template-columns: 1fr;          
+  }
+
+  /* Botones de pestañas más pequeños en pantallas pequeñas */
+  .tabs button {
+    min-width: 70px;                      
+    font-size: 0.85rem;                   
+  }
+}
+

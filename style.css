@@ -1,0 +1,338 @@
+/* Definición de los colores principales para todo el sitio */
+:root {
+  --primary: #1e3a8a;         
+  --secondary: #0f172a;       
+  --bg: #f3f4f6;              
+  --card: #ffffff;           
+  --border: #e5e7eb;          
+  --asistente: #16a34a;       
+  --ponente: #7c3aed;         
+}
+
+/*  RESET GLOBAL */
+/* Asegura que todos los elementos tengan márgenes y rellenos uniformes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;     
+  font-family: "Segoe UI", sans-serif;  
+}
+
+/* ESTILOS GENERALES */
+/* Estilo de fondo y texto del body */
+body {
+  background: var(--bg);             
+  color: #111827;                    
+  line-height: 1.6;                   
+}
+
+/* Estilo para el encabezado (header) */
+header {
+  background: var(--primary);        
+  color: #fff;                       
+  padding: 1rem 2rem;                
+}
+
+/* Estilo para el título en el encabezado */
+header h1 { 
+  font-size: 1.5rem;                  
+}
+
+/* Estilo para el menú de navegación */
+nav { 
+  margin-top: .5rem;                  
+}
+
+/* Estilo para los enlaces del menú */
+nav a {
+  color: white;                       
+  text-decoration: none;              
+  margin-right: 1rem;                 
+  opacity: .8;                        
+}
+
+/* Efectos en los enlaces activos y al pasar el cursor */
+nav a.active, nav a:hover {
+  opacity: 1;                         
+  text-decoration: underline;         
+}
+
+/* Estilo para el contenedor principal */
+.container {
+  max-width: 1200px;                  
+  margin: auto;                      
+  padding: 2rem;                     
+}
+
+/* Estilo para los filtros en la vista de eventos */
+.filtros {
+  display: flex;
+  gap: 1rem;                          
+  flex-wrap: wrap;                    
+  margin-bottom: 2rem;                
+}
+
+/* Estilo para los campos de filtros */
+.filtros input, .filtros select {
+  padding: .5rem;                     
+  border-radius: 6px;               
+  border: 1px solid var(--border);    
+}
+
+/* Estilo para la cuadrícula de eventos */
+.grid-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 1.5rem;                         
+}
+
+/* Estilo para las tarjetas de eventos */
+.evento {
+  background: var(--card);            
+  border: 1px solid var(--border);    
+  border-radius: 8px;                 
+  padding: 1.5rem;                    
+  display: flex;
+  flex-direction: column;             
+  height: 100%;                        
+  transition: transform .3s, box-shadow .3s; 
+}
+
+/* Efecto hover para las tarjetas de evento */
+.evento:hover {
+  transform: translateY(-4px);        
+  box-shadow: 0 10px 20px rgba(0,0,0,.08); 
+}
+
+/* Estilo para el encabezado de cada tarjeta de evento */
+.evento header {
+  display: flex;
+  justify-content: space-between;    
+  align-items: center;               
+  margin-bottom: .5rem;              
+}
+
+/* Estilo para los badges dentro de la tarjeta */
+.badge {
+  background: var(--ponente);         
+  color: white;                      
+  padding: 0.2rem 0.6rem;           
+  border-radius: 12px;               
+  font-size: 0.75rem;                
+  font-weight: bold;                 
+}
+
+/* Estilo para la descripción del evento */
+.evento p.descripcion {
+  flex-grow: 1;                      
+  margin-bottom: 1rem;                
+}
+
+/* Estilo para la sección de metadatos dentro de la tarjeta */
+.meta {
+  display: flex;
+  justify-content: space-between;     
+  margin-bottom: 1rem;                 
+  font-size: .85rem;                   
+  border-top: 1px solid var(--border); 
+  padding-top: 0.5rem;                 
+}
+
+/* Estilo para el contenedor de las acciones (botones) */
+.acciones {
+  display: flex;
+  gap: .4rem;                         
+  flex-wrap: wrap;                    
+}
+
+/* Estilo para los botones */
+.btn {
+  flex: 1;                          
+  padding: .5rem .3rem;                
+  border-radius: 6px;                
+  font-size: .85rem;                   
+  text-decoration: none;              
+  cursor: pointer;                    
+  text-align: center;                
+  border: none;                        
+}
+
+/* Estilo para el botón primario */
+.btn-primary { 
+  background: var(--primary);         
+  color: #fff;                         
+}
+
+/* Estilo para el botón con borde (outline) */
+.btn-outline { 
+  border: 1px solid var(--primary);    
+  color: var(--primary);               
+  background: transparent;             
+}
+
+/* Estilo para el botón de detalles */
+.btn-details { 
+  background: var(--secondary);        
+  color: #fff;                        
+}
+
+/* ESTILOS PARA EL MODAL */
+/* Estilo general para el modal */
+.modal {
+  position: fixed;                    
+  top: 0; left: 0;                   
+  width: 100%; height: 100%;            
+  background: rgba(0, 0, 0, 0.4);      
+  display: flex;
+  justify-content: center;           
+  align-items: center;                 
+  z-index: 1000;                      
+}
+
+/* Estilo para el contenido del modal */
+.modal-content {
+  background: #fff;                  
+  padding: 1.5rem;                     
+  border-radius: 8px;                
+  max-width: 500px;                   
+  width: 90%;                          
+}
+
+/* Estilo para el botón de cerrar el modal */
+.close { 
+  float: right;                        
+  font-size: 1.5rem;                 
+  cursor: pointer;                    
+}
+
+/* Clase para ocultar elementos */
+.hidden { 
+  display: none !important;           
+}
+
+/* Estilo para el pie de página */
+footer { 
+  text-align: center;                 
+  padding: 1rem;                      
+  color: #6b7280;                    
+}
+
+/* ESTILOS RESPONSIVOS  */
+/* Ajustes para pantallas pequeñas (máx. 768px) */
+@media (max-width: 768px) {
+  nav a { 
+    display: inline-block;             
+    margin-bottom: .5rem;              
+  }
+}
+
+/* PARTICIPANTES */
+
+/* Estilo para las tablas dentro de las tarjetas */
+.card table {
+  width: 100%;                         
+  border-collapse: collapse;           
+  margin-top: 1rem;                    
+  font-size: 0.9rem;                   
+}
+
+/* Estilo para las celdas de la tabla */
+.card th,
+.card td {
+  padding: 0.75rem;                    
+  border-bottom: 1px solid var(--border); 
+  text-align: left;                    
+  color: #374151;                      
+}
+
+/* Estilo para los encabezados de la tabla */
+.card th {
+  font-weight: 600;                    
+  background: #f9fafb;                 
+  color: var(--secondary);             
+}
+
+/* Estilo de hover para las filas de la tabla */
+.card tr:hover {
+  background: #f3f4f6;                 
+}
+
+/* Estilo para los encabezados dentro de la tarjeta de Participantes */
+.card h2,
+.card h3 {
+  margin-bottom: 1rem;               
+  color: #111827;                       
+  font-weight: 600;                     
+}
+
+/* Estilo para los badges de participantes */
+.card .badge {
+  padding: 0.2rem 0.6rem;               
+  border-radius: 12px;                 
+  font-size: 0.75rem;                  
+  color: #fff;                          
+  margin-left: 0.3rem;                 
+  vertical-align: middle;             
+  display: inline-block;                
+  font-weight: bold;                   
+}
+
+/* Badge para ponentes */
+.card .badge.ponente {
+  background: var(--ponente);         
+}
+
+/* Badge para asistentes */
+.card .badge.asistente {
+  background: var(--asistente);        
+}
+
+/* Estilo para las barras de progreso */
+.card progress {
+  width: 100%;                          
+  height: 10px;                        
+  border-radius: 5px;                   
+  margin-top: 0.5rem;                   
+  margin-bottom: 1rem;                 
+}
+
+/* Estilos de barra de progreso para WebKit (Chrome, Safari) */
+.card progress::-webkit-progress-bar {
+  background-color: #eee;               
+  border-radius: 5px;                   
+}
+
+.card progress::-webkit-progress-value {
+  background-color: var(--ponente);    
+  border-radius: 5px;                   /
+}
+
+/* Estilos de barra de progreso para Firefox */
+.card progress::-moz-progress-bar {
+  background-color: var(--ponente);     
+  border-radius: 5px;                   
+}
+
+/* Espaciado entre las tarjetas */
+.card {
+  margin-bottom: 1.5rem;                
+}
+
+/* Estilo para los encabezados dentro de cada evento */
+.evento header h3 {
+  color: white !important;               
+}
+
+/* Ajustes responsivos para tablas en pantallas pequeñas */
+@media (max-width: 768px) {
+  .card table,
+  .card th,
+  .card td {
+    font-size: 0.85rem;                  
+  }
+  .card h2,
+  .card h3 {
+    font-size: 1.15rem;                  
+  }
+}
+

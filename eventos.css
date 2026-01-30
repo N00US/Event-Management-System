@@ -1,0 +1,64 @@
+/* Contenedor de filtros con disposición flexible */
+.filtros {
+  display: flex;               
+  gap: 1rem;                  
+  flex-wrap: wrap;            
+  margin-bottom: 2rem;         
+}
+
+/* Estilo para los campos de entrada (input) y selección (select) en filtros */
+.filtros input,
+.filtros select {
+  padding: .5rem;              
+  border-radius: 6px;          
+  border: 1px solid var(--border);  
+}
+
+/* Estilo para la grid de eventos */
+.grid-eventos {
+  display: grid;                                 
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));  
+  gap: 1.5rem;                                   
+}
+
+/* Estilo específico para cada tarjeta de evento */
+.grid-eventos .evento {
+  display: flex;                
+  flex-direction: column;       
+  height: 100%;                 
+}
+
+/* Estilo para la sección de acciones dentro de cada evento */
+.grid-eventos .evento .acciones {
+  margin-top: auto;             
+  display: flex;                
+  gap: 0.5rem;                  
+  align-items: center;          
+}
+
+/* Estilo general para los botones dentro de las acciones */
+.acciones .btn {
+  min-height: 36px;             
+  display: flex;                
+  align-items: center;          
+  justify-content: center;      
+  padding: 0 1rem;              
+}
+
+/* Estilo para el encabezado de cada tarjeta de evento */
+.evento header {
+  display: flex;                              
+  justify-content: space-between;             
+  align-items: center;                        
+  margin-bottom: .5rem;                       
+}
+
+/* Estilo para la sección de meta información (asistentes, ponentes, etc.) */
+.meta {
+  display: flex;                          
+  justify-content: space-between;         
+  margin: 1rem 0;                         
+  font-size: .85rem;                       
+}
+
+

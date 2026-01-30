@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Registro de Participantes</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+
+  <!-- Cabecera del documento con título y navegación principal -->
+  <header>
+    <h1>Registro de Participantes</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="registro.html" class="active">Registrar</a>
+      <a href="participantes.html">Ver Participantes</a>
+    </nav>
+  </header>
+
+  <main class="container">
+
+    <!-- Formulario de registro de participantes -->
+    <form class="card form-registro" id="formRegistro" novalidate>
+    
+      <h2>Formulario de Registro</h2>
+
+      <!-- Selección de evento (obligatorio) -->
+      <label>Evento *</label>
+      <select id="evento" required>
+        <option value="">Selecciona un evento</option>
+        <option value="Congreso de Tecnología 2026">Congreso de Tecnología 2026</option>
+        <option value="Neotech Expo 2026">Neotech Expo 2026</option>
+        <option value="Latam Game & Tech Summit">Latam Game & Tech Summit</option>
+        <option value="Future Dev Conference 2026">Future Dev Conference 2026</option>
+      </select>
+
+      <!-- Selección del tipo de participante (asistente o ponente) -->
+      <label>Tipo de participante *</label>
+      <div class="radio-group">
+        <label><input type="radio" name="tipo" value="Asistente" required> Asistente</label>
+        <label><input type="radio" name="tipo" value="Ponente" required> Ponente</label>
+      </div>
+
+      <!-- Información personal básica -->
+      <label>Nombre completo *</label>
+      <input type="text" id="nombre" required>
+
+      <label>Email *</label>
+      <input type="email" id="email" required>
+
+      <label>Teléfono</label>
+      <input type="text" id="telefono">
+
+      <label>Empresa / Institución</label>
+      <input type="text" id="empresa">
+
+      <label>País / Ciudad</label>
+      <input type="text" id="pais">
+
+      <!-- Campos específicos para asistentes -->
+      <fieldset id="datosAsistente" class="hidden">
+        <legend>Datos de Asistente</legend>
+
+        <!-- Selección de nivel de experiencia del asistente -->
+        <label>Nivel de Experiencia</label>
+        <select id="nivelExperiencia">
+          <option value="">Selecciona nivel</option>
+          <option value="Principiante">Principiante</option>
+          <option value="Intermedio">Intermedio</option>
+          <option value="Avanzado">Avanzado</option>
+        </select>
+
+        <!-- Áreas de interés del asistente -->
+        <label>Áreas de Interés</label>
+        <input type="text" id="areasInteres" placeholder="Ej. IA, Desarrollo Web, Cloud">
+
+        <!-- Selección de si requiere certificado -->
+        <label>Requiere Certificado</label>
+        <select id="requiereCertificado">
+          <option value="">Selecciona</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </fieldset>
+
+      <!-- Campos específicos para ponentes -->
+      <fieldset id="datosPonente" class="hidden">
+        <legend>Datos de Ponente</legend>
+
+        <!-- Título de la ponencia -->
+        <label>Título de la ponencia *</label>
+        <input type="text" id="tituloPonencia" required placeholder="Título de la ponencia">
+
+        <!-- Duración estimada de la ponencia -->
+        <label>Duración estimada *</label>
+        <input type="text" id="duracionPonencia" required placeholder="Duración estimada">
+
+        <!-- Biografía profesional del ponente -->
+        <label>Biografía profesional *</label>
+        <textarea id="bioPonente" required placeholder="Biografía profesional"></textarea>
+
+        <!-- Requerimientos técnicos del ponente -->
+        <label>Requerimientos Técnicos</label>
+        <input type="text" id="requerimientosTecnicos" placeholder="Proyector, micrófono, internet...">
+
+        <!-- Redes sociales o links del ponente -->
+        <label>Redes Sociales / Links</label>
+        <input type="text" id="redesSociales" placeholder="LinkedIn, Twitter, GitHub...">
+      </fieldset>
+
+      <!-- Mensaje de confirmación del registro -->
+      <div class="form-feedback" id="formFeedback">
+        ✔ Registro completado correctamente
+      </div>
+
+      <!-- Botones de acción -->
+      <div class="acciones">
+        <button class="btn btn-primary" id="btnSubmit" type="submit">Registrar</button>
+        <button class="btn btn-outline" id="btnReset" type="button">Reiniciar</button>
+        <a href="index.html" class="btn btn-outline">Cancelar</a>
+      </div>
+
+    </form>
+
+  </main>
+
+  <!-- Archivo de JavaScript para manejar la lógica del formulario -->
+  <script src="js/registro.js"></script>
+</body>
+</html>
+
+
+
+

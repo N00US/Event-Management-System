@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Participantes</title>
+  <!-- Vinculación de hojas de estilo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/participantes.css">
+</head>
+<body>
+
+  <!-- Encabezado principal con navegación -->
+  <header>
+    <h1>Participantes del Evento</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="registro.html">Registrar</a>
+      <a href="participantes.html" class="active">Participantes</a>
+    </nav>
+  </header>
+
+  <!-- Contenedor principal -->
+  <main class="container">
+
+    <!-- Buscador global de eventos -->
+    <section class="filtros">
+      <input type="text" id="search-eventos" placeholder="Buscar evento...">
+    </section>
+
+    <!-- Grid de eventos -->
+    <div class="grid-eventos" id="grid-eventos">
+
+      <!-- EVENTO 1 -->
+      <div class="card evento" data-nombre="Congreso de Tecnología 2026">
+        <h2>Congreso de Tecnología 2026</h2>
+        <p>👥 <span id="total-asistentes-1">120</span> asistentes | 🎤 <span id="total-ponentes-1">8</span> ponentes</p>
+        
+        <!-- Pestañas para alternar vistas: Asistentes, Ponentes, Estadísticas -->
+        <section class="tabs">
+          <button class="tab-link active" data-tab="asistentes-1">Asistentes</button>
+          <button class="tab-link" data-tab="ponentes-1">Ponentes</button>
+          <button class="tab-link" data-tab="estadisticas-1">Estadísticas</button>
+        </section>
+
+        <!-- Sección de Asistentes -->
+        <div class="tab-content" id="asistentes-1" style="display:block;">
+          <div class="search-bar">
+            <input type="text" class="search-asistentes" placeholder="Buscar asistente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Empresa</th>
+                <th>Nivel de Experiencia</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ana López <span class="badge asistente">Asistente</span></td>
+                <td>ana@email.com</td>
+                <td>TechCorp</td>
+                <td>Intermedio</td>
+                <td>2026-01-15</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+              <tr>
+                <td>Juan Pérez <span class="badge asistente">Asistente</span></td>
+                <td>juan@email.com</td>
+                <td>Innova</td>
+                <td>Avanzado</td>
+                <td>2026-01-16</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sección de Ponentes -->
+        <div class="tab-content" id="ponentes-1">
+          <div class="search-bar">
+            <input type="text" class="search-ponentes" placeholder="Buscar ponente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Ponencia</th>
+                <th>Duración</th>
+                <th>Empresa</th>
+                <th>Biografía</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Carlos Ruiz <span class="badge ponente">Principal</span></td>
+                <td>IA en la Web</td>
+                <td>45 min</td>
+                <td>TechCorp</td>
+                <td>Experto en Inteligencia Artificial y desarrollo web.</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+              <tr>
+                <td>María Gómez <span class="badge ponente">Principal</span></td>
+                <td>Seguridad en la Nube</td>
+                <td>30 min</td>
+                <td>CyberSafe</td>
+                <td>Especialista en ciberseguridad y cloud computing.</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Sección de Estadísticas -->
+        <div class="tab-content" id="estadisticas-1">
+          <div class="estadisticas-graficos">
+            <canvas class="grafico-nivel"></canvas>
+            <canvas class="grafico-pais"></canvas>
+            <canvas class="grafico-ratio"></canvas>
+            <canvas class="grafico-registros"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 2 -->
+      <div class="card evento" data-nombre="Neotech Expo 2026">
+        <h2>Neotech Expo <br> 2026</h2>
+        <p>👥 <span id="total-asistentes-2">80</span> asistentes | 🎤 <span id="total-ponentes-2">5</span> ponentes</p>
+        <section class="tabs">
+          <button class="tab-link active" data-tab="asistentes-2">Asistentes</button>
+          <button class="tab-link" data-tab="ponentes-2">Ponentes</button>
+          <button class="tab-link" data-tab="estadisticas-2">Estadísticas</button>
+        </section>
+
+        <!-- Asistentes Evento 2 -->
+        <div class="tab-content" id="asistentes-2" style="display:block;">
+          <div class="search-bar">
+            <input type="text" class="search-asistentes" placeholder="Buscar asistente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Empresa</th>
+                <th>Nivel de Experiencia</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Luis Martínez <span class="badge asistente">Asistente</span></td>
+                <td>luis@email.com</td>
+                <td>DevWorks</td>
+                <td>Principiante</td>
+                <td>2026-02-01</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Ponentes Evento 2 -->
+        <div class="tab-content" id="ponentes-2">
+          <div class="search-bar">
+            <input type="text" class="search-ponentes" placeholder="Buscar ponente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Ponencia</th>
+                <th>Duración</th>
+                <th>Empresa</th>
+                <th>Biografía</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Eva López <span class="badge ponente">Principal</span></td>
+                <td>Robótica Avanzada</td>
+                <td>40 min</td>
+                <td>Neotech</td>
+                <td>Ingeniera en robótica educativa.</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- Estadísticas Evento 2 -->
+        <div class="tab-content" id="estadisticas-2">
+          <div class="estadisticas-graficos">
+            <canvas class="grafico-nivel"></canvas>
+            <canvas class="grafico-pais"></canvas>
+            <canvas class="grafico-ratio"></canvas>
+            <canvas class="grafico-registros"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 3 -->
+      <div class="card evento" data-nombre="Latam Game & Tech Summit">
+        <h2>Latam Game & Tech Summit</h2>
+        <p>👥 <span id="total-asistentes-3">60</span> asistentes | 🎤 <span id="total-ponentes-3">6</span> ponentes</p>
+        <section class="tabs">
+          <button class="tab-link active" data-tab="asistentes-3">Asistentes</button>
+          <button class="tab-link" data-tab="ponentes-3">Ponentes</button>
+          <button class="tab-link" data-tab="estadisticas-3">Estadísticas</button>
+        </section>
+
+        <div class="tab-content" id="asistentes-3" style="display:block;">
+          <div class="search-bar">
+            <input type="text" class="search-asistentes" placeholder="Buscar asistente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Empresa</th>
+                <th>Nivel de Experiencia</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Sofía Torres <span class="badge asistente">Asistente</span></td>
+                <td>sofia@email.com</td>
+                <td>Gametech</td>
+                <td>Avanzado</td>
+                <td>2026-03-05</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-content" id="ponentes-3">
+          <div class="search-bar">
+            <input type="text" class="search-ponentes" placeholder="Buscar ponente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Ponencia</th>
+                <th>Duración</th>
+                <th>Empresa</th>
+                <th>Biografía</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Diego Ramírez <span class="badge ponente">Principal</span></td>
+                <td>Gamificación</td>
+                <td>35 min</td>
+                <td>GameLabs</td>
+                <td>Desarrollador de juegos y entornos VR.</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-content" id="estadisticas-3">
+          <div class="estadisticas-graficos">
+            <canvas class="grafico-nivel"></canvas>
+            <canvas class="grafico-pais"></canvas>
+            <canvas class="grafico-ratio"></canvas>
+            <canvas class="grafico-registros"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <!-- EVENTO 4 -->
+      <div class="card evento" data-nombre="Future Dev Conference 2026">
+        <h2>Future Dev Conference 2026</h2>
+        <p>👥 <span id="total-asistentes-4">100</span> asistentes | 🎤 <span id="total-ponentes-4">7</span> ponentes</p>
+        <section class="tabs">
+          <button class="tab-link active" data-tab="asistentes-4">Asistentes</button>
+          <button class="tab-link" data-tab="ponentes-4">Ponentes</button>
+          <button class="tab-link" data-tab="estadisticas-4">Estadísticas</button>
+        </section>
+
+        <div class="tab-content" id="asistentes-4" style="display:block;">
+          <div class="search-bar">
+            <input type="text" class="search-asistentes" placeholder="Buscar asistente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Email</th>
+                <th>Empresa</th>
+                <th>Nivel de Experiencia</th>
+                <th>Fecha de Registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Martín Herrera <span class="badge asistente">Asistente</span></td>
+                <td>martin@email.com</td>
+                <td>DevFuture</td>
+                <td>Intermedio</td>
+                <td>2026-04-10</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-content" id="ponentes-4">
+          <div class="search-bar">
+            <input type="text" class="search-ponentes" placeholder="Buscar ponente...">
+          </div>
+          <table>
+            <thead>
+              <tr>
+                <th>Nombre</th>
+                <th>Ponencia</th>
+                <th>Duración</th>
+                <th>Empresa</th>
+                <th>Biografía</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Laura Méndez <span class="badge ponente">Principal</span></td>
+                <td>Desarrollo Web</td>
+                <td>50 min</td>
+                <td>WebFuture</td>
+                <td>Especialista en frontend y UX.</td>
+                <td><button class="btn-detalles">Ver Detalles</button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-content" id="estadisticas-4">
+          <div class="estadisticas-graficos">
+            <canvas class="grafico-nivel"></canvas>
+            <canvas class="grafico-pais"></canvas>
+            <canvas class="grafico-ratio"></canvas>
+            <canvas class="grafico-registros"></canvas>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Scripts: Chart.js para gráficos y JS personalizado para interacción -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="js/participantes.js"></script>
+</body>
+</html>
+
+
+
+

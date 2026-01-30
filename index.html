@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sistema de Eventos</title>
+  <!-- Vinculación de hojas de estilo CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/eventos.css">
+</head>
+<body>
+
+  <!-- Encabezado principal con navegación -->
+  <header>
+    <h1>Sistema de Gestión de Eventos</h1>
+    <nav>
+      <a href="index.html" class="active">Inicio</a>
+      <a href="registro.html">Registrar Participante</a>
+      <a href="participantes.html">Ver Participantes</a>
+    </nav>
+  </header>
+
+  <!-- Contenedor principal del contenido -->
+  <main class="container">
+
+    <!-- Sección de filtros para búsqueda y clasificación de eventos -->
+    <section class="filtros">
+      <input type="text" id="searchInput" placeholder="Buscar evento">
+      
+      <!-- Filtro por categoría de evento -->
+      <select id="filterCategory">
+        <option value="">Todas las categorías</option>
+        <option value="Tecnología">Tecnología</option>
+        <option value="Videojuegos">Videojuegos</option>
+        <option value="Ciberseguridad">Ciberseguridad</option>
+      </select>
+
+      <!-- Filtro por mes del evento -->
+      <select id="filterMonth">
+        <option value="">Todos los meses</option>
+        <option value="01">Enero</option>
+        <option value="02">Febrero</option>
+        <option value="03">Marzo</option>
+        <option value="04">Abril</option>
+        <option value="05">Mayo</option>
+        <option value="06">Junio</option>
+        <option value="07">Julio</option>
+        <option value="08">Agosto</option>
+        <option value="09">Septiembre</option>
+        <option value="10">Octubre</option>
+        <option value="11">Noviembre</option>
+        <option value="12">Diciembre</option>
+      </select>
+
+      <!-- Filtro para ordenar los eventos -->
+      <select id="sortOption">
+        <option value="recientes">Más recientes</option>
+        <option value="participantes">Más participantes</option>
+        <option value="az">A - Z</option>
+      </select>
+    </section>
+
+    <!-- Sección que contiene todas las tarjetas de eventos -->
+    <section class="grid-eventos">
+
+      <!-- Tarjeta de evento individual -->
+      <article class="card evento" data-categoria="Tecnología" data-fecha="2026-03-15" data-asistentes="120" data-nombre="Congreso de Tecnología">
+        <header>
+          <h3>Congreso de Tecnología</h3>
+          <span class="badge ponente">Tecnología</span>
+        </header>
+        <p><strong>Fecha:</strong> 15 de marzo 2026</p>
+        <p><strong>Horario:</strong> 09:00 - 18:00</p>
+        <p><strong>Lugar:</strong> Centro de Convenciones CDMX</p>
+        <p class="descripcion">Evento enfocado en innovación inteligencia artificial, desarrollo web y gadgets futuristas.</p>
+        <div class="meta">
+          <span>👥 120 asistentes</span>
+          <span>🎤 8 ponentes</span>
+        </div>
+        <div class="acciones">
+          <a href="participantes.html" class="btn btn-outline">Participantes</a>
+          <a href="registro.html" class="btn btn-primary">Registrar</a>
+          <button class="btn btn-details">Detalles</button>
+        </div>
+      </article>
+
+      <article class="card evento" data-categoria="Tecnología" data-fecha="2026-06-20" data-asistentes="200" data-nombre="Neotech Expo 2026">
+        <header>
+          <h3>Neotech Expo 2026</h3>
+          <span class="badge ponente">Tecnología</span>
+        </header>
+        <p><strong>Fecha:</strong> 20 de junio 2026</p>
+        <p><strong>Horario:</strong> 11:00 - 17:00</p>
+        <p><strong>Lugar:</strong> Centro de Convenciones IFEMA</p>
+        <p class="descripcion">Feria internacional enfocada en inteligencia artificial y tecnología de consumo.</p>
+        <div class="meta">
+          <span>👥 200 asistentes</span>
+          <span>🎤 10 ponentes</span>
+        </div>
+        <div class="acciones">
+          <a href="participantes.html" class="btn btn-outline">Participantes</a>
+          <a href="registro.html" class="btn btn-primary">Registrar</a>
+          <button class="btn btn-details">Detalles</button>
+        </div>
+      </article>
+
+      <article class="card evento" data-categoria="Videojuegos" data-fecha="2026-08-23" data-asistentes="150" data-nombre="Latam Game & Tech Summit">
+        <header>
+          <h3>Latam Game & Tech Summit</h3>
+          <span class="badge ponente">Videojuegos</span>
+        </header>
+        <p><strong>Fecha:</strong> 23 de agosto 2026</p>
+        <p><strong>Horario:</strong> 13:00 - 20:00</p>
+        <p><strong>Lugar:</strong> Expo Santa Fe, CDMX</p>
+        <p class="descripcion">Evento híbrido de videojuegos, realidad virtual y tecnología interactiva.</p>
+        <div class="meta">
+          <span>👥 150 asistentes</span>
+          <span>🎤 12 ponentes</span>
+        </div>
+        <div class="acciones">
+          <a href="participantes.html" class="btn btn-outline">Participantes</a>
+          <a href="registro.html" class="btn btn-primary">Registrar</a>
+          <button class="btn btn-details">Detalles</button>
+        </div>
+      </article>
+
+      <article class="card evento" data-categoria="Ciberseguridad" data-fecha="2026-04-11" data-asistentes="500" data-nombre="Future Dev Conference 2026">
+        <header>
+          <h3>Future Dev Conference 2026</h3>
+          <span class="badge ponente">Ciberseguridad</span>
+        </header>
+        <p><strong>Fecha:</strong> 11 de abril 2026</p>
+        <p><strong>Horario:</strong> 12:00 - 16:00</p>
+        <p><strong>Lugar:</strong> Moscone Center, San Francisco, EE.UU.</p>
+        <p class="descripcion">Conferencia centrada en desarrollo de software, cloud computing y ciberseguridad.</p>
+        <div class="meta">
+          <span>👥 500 asistentes</span>
+          <span>🎤 15 ponentes</span>
+        </div>
+        <div class="acciones">
+          <a href="participantes.html" class="btn btn-outline">Participantes</a>
+          <a href="registro.html" class="btn btn-primary">Registrar</a>
+          <button class="btn btn-details">Detalles</button>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <!-- Modal emergente para mostrar detalles del evento -->
+  <div id="eventModal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" id="closeModal">&times;</span>
+      <h2 id="modalTitle"></h2>
+      <hr>
+      <div id="modalBody" style="margin-top: 1rem;"></div>
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer>Sistema de Eventos</footer>
+
+  <!-- Vinculación del archivo JS que controla los filtros y búsquedas -->
+  <script src="js/filtros.js"></script>
+</body>
+</html>
+
+
